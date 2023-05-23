@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 mongoose
   .connect(process.env.CONNECTION_URL)
   .then(() => {
-    app.listen(3000, () => {
+    app.listen(process.env.PORT ||3000, () => {
       console.log("got it");
     });
   })
